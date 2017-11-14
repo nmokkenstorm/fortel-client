@@ -23,6 +23,23 @@ window.axios.defaults.headers.common = {
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+import VueRouter from 'vue-router';
+Vue.use(VueRouter);
+
+Vue.component('app',require('./components/Application.vue'));
+Vue.component('application-nav',require('./components/ApplicationNav.vue'));
+
+const Home = { template: '<div>Home</div>' };
+
+const routes = [
+	{ path: '/', component: Home },
+];
+
+const router = new VueRouter({
+	routes // short for `routes: routes`
+});
+
 const app = new Vue({
-    el: '#container'
+    el: '#container',
+	router:router,
 });

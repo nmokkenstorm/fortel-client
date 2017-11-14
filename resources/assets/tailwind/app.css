@@ -1,4 +1,10 @@
 /* Tailwind */
 @tailwind preflight;
 
+@tailwind utilities;
+
+body { background: config('colors.blue-darkest') }
+
+.container { background: config('colors.blue-lightest') }
+
 @tailwind postflight;
